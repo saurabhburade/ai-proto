@@ -1,6 +1,6 @@
 import React from "react";
 
-import AIModelList from "./AiModelList";
+import AiModelList from "./AiModelList";
 import AimodelsHead from "./AimodelsHead";
 
 type Props = {};
@@ -10,7 +10,7 @@ function AIModels({}: Props) {
     <div className="bg-base-300 rounded-xl p-2">
       <AimodelsHead />
       <div>
-        <AIModelList />
+        <AiModelList />
       </div>
     </div>
   );

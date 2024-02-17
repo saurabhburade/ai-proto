@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 type Props = {};
 const MAX_RATING = 5;
-function AIModelList({}: Props) {
+function AiModelList({}: Props) {
   return (
     <div className="overflow-scroll h-[424px]">
       {AI_MODELS?.map((model, idx) => {
@@ -102,4 +102,4 @@ const ModelRow = ({ model }) => {
   );
 };
 
-export default AIModelList;
+export default AiModelList;
