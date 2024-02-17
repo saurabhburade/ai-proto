@@ -17,17 +17,74 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #6466f2;
+  color: white;
 }
-
+bg-primary {
+  background-color: #6466f2;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+#color-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #6466f2;
+  cursor: pointer;
+  border-radius: 100%;
+  position: relative;
+  left: 0;
+  box-shadow: 1px 1px 5px;
+  border: 4px solid white;
+}
+
+.bg-base-300 {
+  background-color: #26252a;
+}
+.bg-base-200 {
+  background-color: #201f23;
+}
+.bg-base-100 {
+  background-color: #17171a;
+}
+@keyframes strike-through {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.strike-through-animation {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    animation: strike-through 1s linear forwards;
+  }
+}
+.opacity-transition-animation {
+  animation: opacity-animation 300ms linear forwards;
+}
+dialog::backdrop {
+  backdrop-filter: blur(5px);
 }
