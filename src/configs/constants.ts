@@ -1,3 +1,34 @@
+export const DEFAULT_TASKS = [
+  {
+    title: "Frontend",
+    isChecked: false,
+  },
+  {
+    title: "Review the Design",
+    isChecked: false,
+  },
+  {
+    title: "Backend",
+    isChecked: true,
+  },
+  {
+    title: "Estimate the time",
+    isChecked: false,
+  },
+  {
+    title: "Code UI",
+    isChecked: false,
+  },
+  {
+    title: "Testing",
+    isChecked: false,
+  },
+  {
+    title: "Submit",
+    isChecked: false,
+  },
+];
+
 export const AI_MODELS = [
   {
     name: "Chat GPT",
@@ -177,6 +208,41 @@ export const AI_MODELS = [
       },
     ],
     rating: 4,
-    },
-  
+  },
+];
+
+export const DEFAULT_FILTER_LIST = [
+  {
+    title: "All",
+    isChecked: true,
+    hasDash: true,
+  },
+  {
+    title: "UX/UI Design",
+    isChecked: true,
+  },
+  {
+    title: "Frontend",
+    isChecked: true,
+  },
+  {
+    title: "Backend",
+    isChecked: true,
+  },
+  {
+    title: "Full Stack",
+    isChecked: false,
+  },
+  {
+    title: "Graphic Designer",
+    isChecked: false,
+  },
+  {
+    title: "Web Designer",
+    isChecked: false,
+  },
+  {
+    title: "QA",
+    isChecked: false,
+  },
 ];

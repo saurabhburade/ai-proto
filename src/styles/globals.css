@@ -88,3 +88,151 @@ bg-primary {
 dialog::backdrop {
   backdrop-filter: blur(5px);
 }
+
+.resize {
+  border: 1px solid black;
+  overflow: auto;
+}
+.resize.horizontal {
+  resize: horizontal;
+}
+.resize.vertical {
+  resize: vertical;
+}
+.resize.both {
+  resize: both;
+}
+.wrap {
+  max-width: 80%;
+}
+
+.accordion-content {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.accordion-content.open {
+  height: 100px; /* Set your desired maximum height for the open state */
+}
+.bouncy-dialog {
+  animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* CLOCK */
+
+.analog-clock {
+  width: 140px;
+  height: 140px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: relative;
+}
+
+.hand {
+  position: absolute;
+  transform-origin: 50% 100%;
+  background-color: #333;
+}
+
+.hour-hand {
+  height: 40px;
+  width: 4px;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -2px;
+}
+
+.minute-hand {
+  height: 50px;
+  width: 2px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -1px;
+}
+
+.second-hand {
+  height: 60px;
+  width: 1px;
+  background-color: red; /* Color for the second hand */
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -0.5px;
+}
+
+.center-circle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #333;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* RESIZE */
+
+.resizeable {
+  position: relative;
+  top: 0;
+  bottom: 0;
+
+
+  border-radius: 3px;
+
+  min-width: 15px;
+  min-height: 15px;
+}
+
+.resizer {
+  position: absolute;
+  background: transparent;
+}
+
+.resizer-r {
+  cursor: col-resize;
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 5px;
+}
+
+.resizer-t {
+  cursor: row-resize;
+  height: 5px;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.resizer-b {
+  cursor: row-resize;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.resizer-l {
+  cursor: col-resize;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 5px;
+}

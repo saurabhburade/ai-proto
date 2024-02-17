@@ -1,14 +1,14 @@
 import React from "react";
-import AImodelsHead from "./AImodelsHead";
-import AIModelList from "./AIModelList";
+
+import AIModelList from "./AiModelList";
+import AimodelsHead from "./AimodelsHead";
 
 type Props = {};
 
 function AIModels({}: Props) {
   return (
     <div className="bg-base-300 rounded-xl p-2">
-      <AImodelsHead />
-      
+      <AimodelsHead />
       <div>
         <AIModelList />
       </div>

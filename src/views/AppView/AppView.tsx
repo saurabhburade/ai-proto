@@ -4,19 +4,32 @@ import TodaysTasks from "./components/TodaysTasks";
 import AIModels from "./components/AIModels";
 import ImageProcessor from "./components/ImageProcessor";
 
+import Resizable from "@/components/Resizable";
+import dynamic from "next/dynamic";
+const DragAndDropContainer = dynamic(
+  () => import("./components/DragAndDropContainer"),
+  {
+    ssr: false,
+  }
+);
 type Props = {};
 
 function AppView({}: Props) {
   return (
-    <div className="container mx-auto  space-y-[16px] ">
+    <div className="container mx-auto  space-y-[16px] my-10">
       <PrimaryColorSlider />
-      <div className="p-5 bg-base-200 rounded-xl  space-y-[16px]">
+
+      <div className="p-5 bg-base-200 rounded-xl  space-y-[16px] overflow-hidden">
         <div className="grid grid-cols-[1fr_2fr_1fr] gap-[16px]">
-          <TodaysTasks />
+          <Resizable extraClassNames={"max-w-[400px] min-w-[100px] h-full"}>
+            <TodaysTasks />
+          </Resizable>
           <AIModels />
-          <TodaysTasks />
+          <DragAndDropContainer />
         </div>
-        <ImageProcessor />
+        <Resizable extraClassNames={" h-full bg-base-300"}>
+          <ImageProcessor />
+        </Resizable>
       </div>
     </div>
   );

@@ -44,9 +44,9 @@ function AIGenerateWidget({}: Props) {
 
       <dialog
         id="prompt_modal"
-        className="rounded-2xl w-[722px] bg-[#141417] text-white backdrop-blur-md z-50"
+        className="rounded-2xl w-[722px] bg-[#141417] text-white backdrop-blur-md z-50 animate-bounce bouncy-dialog"
       >
-        <div className="bg-[#141417] p-5 space-y-4 opacity-transition-animation">
+        <div className="bg-[#141417] p-5 space-y-4 ">
           <div className="flex gap-4">
             <svg
               width="20"

@@ -1,25 +1,28 @@
 import CheckBox from "@/components/CheckBox";
 import React, { useState } from "react";
-
+import {
+  motion,
+  HTMLMotionProps,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
+import { DEFAULT_TASKS } from "@/configs/constants";
 type Props = {};
-const TASKS = [
-  { task: "Frontend", isCompleted: false },
-  { task: "Backend", isCompleted: false },
-];
+
 function TodaysTasks({}: Props) {
   //   const [checkList, setcheckList] = useState(TASKS);
 
   return (
-    <div className="bg-base-300 p-[32px] rounded-xl space-y-[24px]">
+    <div className="bg-base-300 p-[32px] rounded-xl space-y-[24px]  h-full  max-w-[400px] min-w-fit">
       <h2 className="text-[24px]">Today{"'"}s Tasks</h2>
       <div className="flex flex-col  mb-4 gap-[24px]">
-        {TASKS?.map((item) => {
+        {DEFAULT_TASKS?.map((item) => {
           return (
             <CheckBox
-              key={item?.task}
+              key={item?.title}
               onStatusChange={() => null}
-              checkStatus={item?.isCompleted}
-              task={item?.task}
+              checkStatus={item?.isChecked}
+              task={item?.title}
             />
           );
         })}
