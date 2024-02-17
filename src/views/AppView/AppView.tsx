@@ -21,13 +21,19 @@ function AppView({}: Props) {
 
       <div className="p-5 bg-base-200 rounded-xl  space-y-[16px] overflow-hidden">
         <div className="grid grid-cols-[1fr_2fr_1fr] gap-[16px]">
-          <Resizable extraClassNames={"max-w-[400px] min-w-[100px] h-full"}>
+          <Resizable
+            showResizerThumbRight={true}
+            extraClassNames={"max-w-[400px] min-w-[100px] h-full"}
+          >
             <TodaysTasks />
           </Resizable>
           <AIModels />
           <DragAndDropContainer />
         </div>
-        <Resizable extraClassNames={" h-full bg-base-300"}>
+        <Resizable
+          extraClassNames={" h-full bg-base-300"}
+          showResizerThumbRight={false}
+        >
           <ImageProcessor />
         </Resizable>
       </div>

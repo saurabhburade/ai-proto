@@ -120,7 +120,9 @@ function CheckBox({ checkStatus, item, hasDash }) {
       />
       <div
         className={`w-5 h-5 border  rounded transition-all duration-[700ms]  ${
-          isChecked ? "bg-blue-500 border-blue-500" : "bg-white border-white "
+          isChecked
+            ? "bg-primary-400 border-[#764FFF]"
+            : "bg-white border-white "
         }`}
       >
         {hasDash && isChecked && (

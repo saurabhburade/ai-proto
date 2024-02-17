@@ -22,8 +22,8 @@ const ModelRow = ({ model }) => {
     <div className="">
       <div
         className={` ${
-          isOpen ? "shadow-lg  " : ""
-        } w-full cursor-pointer px-[28px] py-[8px] duration-[700ms] transition-all rounded-xl h-[64px] grid grid-cols-[244px_80px_80px_80px_116px] items-center`}
+          isOpen ? "shadow-lg hover:rounded-t-xl " : ""
+        } w-full active:bg[#17171A] cursor-pointer px-[28px] py-[8px] hover:bg-[#201F23] cursor-pointer duration-[700ms] transition-all rounded-xl h-[64px] grid grid-cols-[244px_80px_80px_80px_116px] items-center`}
         onClick={toggleAccordion}
       >
         <div className="flex w-[244px] items-center">
@@ -34,7 +34,7 @@ const ModelRow = ({ model }) => {
             height={24}
             className="mx-[8px] rounded-full w-[24px] h-[24px] object-cover"
           />
-          <p>Chat Gpt</p>
+          <p>{model?.name}</p>
         </div>
         <p className="w-[80px]">{model?.version} </p>
         <p className="w-[80px]"> {model?.liscence} </p>

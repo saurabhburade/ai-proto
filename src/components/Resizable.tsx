@@ -9,6 +9,7 @@ function Resizable({
   enableRight = true,
   enableTop = true,
   enableBottom = true,
+  showResizerThumbRight = false,
 }) {
   const ref = useRef(null);
   const refLeft = useRef(null);
@@ -19,8 +20,8 @@ function Resizable({
   useEffect(() => {
     const resizeableEle = ref.current;
     const styles = window.getComputedStyle(resizeableEle);
-    let width = parseInt(styles.width, 10);
-    let height = parseInt(styles.height, 10);
+    let width = parseInt(styles.width, 0);
+    let height = parseInt(styles.height, 0);
     let x = 0;
     let y = 0;
 
@@ -144,6 +145,7 @@ function Resizable({
       <div
         ref={ref}
         className={`resizeable   overflow-hidden ${extraClassNames}`}
+        data-resizer-thumb-right={`${showResizerThumbRight}`}
       >
         {children}
         {enableLeft && <div ref={refLeft} className="resizer resizer-l"></div>}

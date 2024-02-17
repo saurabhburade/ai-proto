@@ -26,7 +26,7 @@ function CheckBox({ onStatusChange, task, checkStatus }: Props) {
       <div
         className={`w-5 h-5 border  rounded transition-all duration-[700ms] ${
           isChecked
-            ? "bg-blue-500 border-blue-500"
+            ? "bg-primary-400 border-[#764FFF]"
             : "bg-transparent border-white "
         }`}
       >
@@ -50,7 +50,9 @@ function CheckBox({ onStatusChange, task, checkStatus }: Props) {
       <span className="line-through-animated"></span>
       <span
         className={`${
-          isChecked ? "strike-through-animation text-blue-500" : ""
+          isChecked
+            ? " text-[#764FFF]  strike-through-animation duration-200 transition-all "
+            : ""
         }`}
       >
         {task}
