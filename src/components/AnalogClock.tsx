@@ -14,7 +14,7 @@ const AnalogClock = () => {
   } = useClockTime();
   useEffect(() => {});
   return (
-    <div className="analog-clock  bg-white">
+    <div className="analog-clock  bg-white ">
       <div
         className="hand hour-hand"
         style={{ transform: `rotate(${hourDeg}deg)` }}

@@ -54,7 +54,7 @@ const DropArea = ({ onDrop }) => {
       style={{
         border: "2px dashed #FFFFFF4D",
       }}
-      className="w-[10em] h-[10em] rounded-full overflow-hidden bg-"
+      className="w-[132px] h-[132px] rounded-full overflow-hidden bg-"
     ></div>
   );
 };
@@ -69,7 +69,7 @@ const DragAndDropContainer = () => {
 
   return (
     <div
-      className="h-[597px] relative top-0 grid grid-rows-4 justify-items-center items-center   p-[32px]"
+      className="h-[597px] relative top-0 grid grid-rows-4 justify-items-center items-center   p-[64px]"
       style={{
         backgroundImage: `url('/images/clock-gradient-bg.png'),  url('/images/clock-bg.png')`,
         backgroundRepeat: "no-repeat",
@@ -85,7 +85,14 @@ const DragAndDropContainer = () => {
       <div>
         {!hasDropped && <DropArea onDrop={handleDrop} />}
         {hasDropped && (
-          <div>
+          <div
+            onClick={() => {
+              sethasDropped(false);
+            }}
+            onDragEnd={() => {
+              sethasDropped(false);
+            }}
+          >
             <DraggableItem id={1} name="Item 2" onDrop={handleDrop} />
           </div>
         )}
@@ -96,7 +103,7 @@ const DragAndDropContainer = () => {
 const CurrentTime = () => {
   const { hours, minutes, seconds } = useClockTime();
   return (
-    <p className="text-5xl">
+    <p className="text-[32px] font-[400]">
       {" "}
       {hours}:{minutes}:{seconds}
     </p>

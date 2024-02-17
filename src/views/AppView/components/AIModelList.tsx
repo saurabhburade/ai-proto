@@ -23,7 +23,7 @@ const ModelRow = ({ model }) => {
       <div
         className={` ${
           isOpen ? "shadow-lg hover:rounded-t-xl " : ""
-        } w-full active:bg[#17171A] cursor-pointer px-[28px] py-[8px] hover:bg-[#201F23] cursor-pointer duration-[700ms] transition-all rounded-xl h-[64px] grid grid-cols-[244px_80px_80px_80px_116px] items-center`}
+        } w-full active:bg[#17171A] cursor-pointer px-[28px] py-[8px] text-[14px] hover:bg-[#201F23] cursor-pointer duration-[700ms] transition-all rounded-xl h-[64px] grid grid-cols-[244px_80px_80px_80px_116px] items-center`}
         onClick={toggleAccordion}
       >
         <div className="flex w-[244px] items-center">
@@ -36,8 +36,8 @@ const ModelRow = ({ model }) => {
           />
           <p>{model?.name}</p>
         </div>
-        <p className="w-[80px]">{model?.version} </p>
-        <p className="w-[80px]"> {model?.liscence} </p>
+        <p className="w-[80px] text-white/60">{model?.version} </p>
+        <p className="w-[80px] text-white/60"> {model?.liscence} </p>
         <div className="flex -space-x-2 rtl:space-x-reverse w-[80px] overflow-hidden justify-center">
           {model?.contributors?.length > 0 &&
             model?.contributors?.map((contributor) => {
