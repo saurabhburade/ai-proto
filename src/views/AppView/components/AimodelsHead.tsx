@@ -8,7 +8,7 @@ function AimodelsHead({}: Props) {
     <div className="bg-base-200 rounded-xl h-[162px]">
       <div className=" p-[24px] space-y-[12px]">
         {" "}
-        <h2 className="text-[24px]">AI Models</h2>
+        <h2 className="text-[24px] font-[600]">AI Models</h2>
         <div className="flex gap-[12px]">
           <Dropdown />
           <Dropdown />
