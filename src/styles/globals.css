@@ -149,43 +149,46 @@ dialog::backdrop {
 .hand {
   position: absolute;
   transform-origin: 50% 100%;
-  background-color: #333;
+  background-color: #000000;
 }
 
 .hour-hand {
-  height: 40px;
-  width: 4px;
+  height: 31px;
+  width: 1.5px;
   top: 50%;
   left: 50%;
-  margin-top: -40px;
+  margin-top: -31px;
   margin-left: -2px;
+  border-radius: 1.5px 1.5px 0px 0px;
+
 }
 
 .minute-hand {
-  height: 50px;
+  height: 42.3px;
   width: 2px;
   top: 50%;
   left: 50%;
-  margin-top: -50px;
+  margin-top: -42.3px;
   margin-left: -1px;
+  border-radius: 1.5px 1.5px 0px 0px;
 }
 
 .second-hand {
-  height: 60px;
-  width: 1px;
-  background-color: red; /* Color for the second hand */
+  height: 42px;
+  width: 1.5px;
+  background-color: #3f3db6; /* Color for the second hand */
   top: 50%;
   left: 50%;
-  margin-top: -60px;
+  margin-top: -42px;
   margin-left: -0.5px;
 }
 
 .center-circle {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 6.67px;
+  height: 6.67px;
   border-radius: 50%;
-  background-color: #333;
+  background-color: #3f3db6;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
